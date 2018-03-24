@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include template/head.ejs %> <!-- include is a keyword in EJS -->
+    </head>
+  <body>
+    <% include content/header.ejs %>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+            <% include content/mainContent.ejs %>
+        </div><!-- primary -->
+        <aside class="col-sm-4">
+          <article class="sidebar">
+            <h1 class="sidebar-title">Who should come?</h1>
+            <ul class="sidebar-body">
+              <li>Anybody interested in art and the creative industry</li>
+              <li>Painters, sculptors, photographers and graphic artists</li>
+              <li>Those interested in meeting and making a connection with others in the local art scene.</li>
+            </ul>
+          </article><!-- article -->
+        </aside><!-- secondary -->
+      </div>
+    </div><!-- container -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <% if (typeof artwork !== 'undefined') { %>
+
+    <script src="/js/pixgrid.js"></script>
+
+    <% } %>
+    <script src="/reload/reload.js"></script>
+  </body>
+</html>
+
+
+
+
+<!-- using EJS to fill in photos from the JSON path citation of artwork that itself leads to the image sources to be displayed -->
+<article>
+        <div class="pixgrid">
+    
+    
+        <% if (artwork.length > 0) { %>
+            <% for (var i = 0; i < artwork.length; i++) { %>
+                <img src='images/artwork/<%= artwork[i] %>'>
+            <% } %>
+        <% } %>
+    
+        </div>
+    </article>

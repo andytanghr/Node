@@ -1,0 +1,39 @@
+{
+   "animals":[
+      {
+         "name":"Hello Dog",
+         "description":"Yes, this is dog",
+         "kind":"dog",
+         "imgURL":"yesthisisdog.jpg"
+      },
+      {
+         "name":"Nyan Cat",
+         "description":"Nyanyanyanyanyanyanya!",
+         "kind":"cat",
+         "imgURL":"nyanCat.jpg"
+      },
+      {
+         "name":"Grumpy Cat",
+         "description":"everything is terrible",
+         "imgURL":"grumpyCat.jpg"
+      },
+      {
+         "name":"World's Ugliest Dog",
+         "description":"not actually ugly!",
+         "kind":"dog",
+         "imgURL":"worldsUgliestDog.jpg"
+      },
+      {
+         "name":"Smelly Cat",
+         "description":"What are they feeding you?",
+         "kind":"cat",
+         "imgURL":"smellyCat.jpg"
+      },
+      {
+          "name":"Happy Cat",
+          "description":"I can has cheezburger?",
+          "kind":"cat",
+          "imgURL":"iCanHasCheezburger.jpg"
+      }
+   ]
+}

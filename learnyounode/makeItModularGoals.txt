@@ -1,0 +1,15 @@
+// program
+
+// print a list of files in a given directory, filtered by the file extension
+
+// second cmd line arg is dir path
+// third is file extname
+
+// use async IO
+
+
+
+
+// module
+// export a function that takes three args, dir name, file extension, callback
+
