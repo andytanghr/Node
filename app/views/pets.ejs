@@ -6,8 +6,18 @@
 <body>
     <div class="container-fluid">
         <% include header.ejs %>
-        
-        <%= pageBody %>
+
+    <!-- content starts -->
+        <h2>Cavalcade of (Pet) Stars presents:</h2> <!--< name %> -->
+        <p>
+            <!-- < description %> -->
+        </p>
+        <% if (pagePhotos.length > 0) { %>
+            <% for (var i = 0; i < pagePhotos.length; i++) { %>
+                <img src='images/<%= pagePhotos[i]%>'>
+            <% } %>
+        <% } %>
+
 
         <% include footer.ejs %>
     </div>

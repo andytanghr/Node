@@ -1,4 +1,21 @@
+/* next four styles are for CSS fix for persistent footer */
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 body {
-    color: white;
-    background-color: black;
+    margin: 0;
+    padding-bottom: 50px;
+    position: relative;
+}
+footer {
+    position: absolute;
+}
+.footer, .footer * {
+    margin-left:auto;
+    margin-right: auto;
+    text-align: center;
 }

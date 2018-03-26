@@ -6,8 +6,16 @@
 <body>
     <div class="container-fluid">
         <% include header.ejs %>
+
+        <h2><%=pageTitle %></h2>
         
-        <%= pageBody %>
+        <p><%= pageBody %></p>
+
+        <% if (pagePhotos.length > 0) { %>
+            <% for (var i = 0; i < pagePhotos.length; i++) { %>
+                <img src='images/<%= pagePhotos[i]%>'>
+            <% } %>
+        <% } %>
 
         <% include footer.ejs %>
     </div>

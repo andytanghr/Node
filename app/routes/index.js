@@ -13,12 +13,12 @@ router.get('/', function(req, res) {
 
   res.render('index', {
     pageTitle: 'I am the index title',
-    pageBody: 'I am the body',
+    pageBody: 'I am the body ok',
     // artwork: pagePhotos
 
   });
 
-  console.log(pagePhotos);
+  // console.log(pagePhotos);
 
 });
 
