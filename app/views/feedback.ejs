@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <% include template/head.ejs %>
+</head>
+<body>
+    <div class="container-fluid">
+        <% include template/header.ejs %>
+            
+        <p><%= pageBody %></p>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Feed me feedback</h3>
+                <form class="feedbackForm">
+                    <div class="form-group">
+                        <label for="feedbackEmail">Email</label>
+                        <input type="email" class="form-control" id="feedbackEmail" placeholder="meowzers@paws.cute">
+                    </div>
+                    <div class="form-group">
+                        <label for="feedbackCheezburgers">How many cheezburgers?</label>
+                        <select class="form-control" id="feedbackCheezburgers">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedbackMessage">Explain this is dog</label>
+                        <textarea class="form-control" id="feedbackMessage" rows="3" placeholder="Yes, this is dog"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary pull-right">Send in the clowns</button>
+                </form>
+            </div>
+            <div class="col-sm-6 feedback">
+                <p>feedback here</p>
+            </div>
+        </div>
+
+
+
+        <% include template/footer.ejs %>
+
+        <% include scripts.ejs %>
+    </div>
+</body>
+</html>

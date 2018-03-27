@@ -19,3 +19,7 @@ footer {
     margin-right: auto;
     text-align: center;
 }
+.formLeft {
+    /* float: left; */
+    height: 500px;
+}
