@@ -1,15 +1,16 @@
 var express = require('express');
+var app = express();
 var dataFile = require('./data/data.json');
 var animalData = require('./data/animals.json');
-var app = express();
 var reload = require('reload');
 
 // sets environmental variables for the entire app, globally
 app.set('view engine', 'ejs');
-app.set('views', './views'); // second property: 'app/views' vs 'views', app/views doesn't work for me???
+app.set('views', __dirname + '/views'); // second property: 'app/views' vs 'views', app/views doesn't work for me???
 app.set('appData', dataFile);
 app.set('animalData', animalData);
 
+// console.log(__dirname + '/views');
 
 // public folder in reference to root folder, and other routing info
 app.use(express.static('./public'));
@@ -28,7 +29,7 @@ app.use(require('./routes/api'));
 
 var server = app.listen(3000, function() {
 
-  console.log('Example app listening on port 3000');
+  console.log('Cats and dogs app listening on port 3000');
 });
 
 reload(server, app);
