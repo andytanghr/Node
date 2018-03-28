@@ -3,11 +3,11 @@ var router = express.Router();
 
 router.get('/feedback', function(req, res) {
   res.render('feedback', {
-    pageTitle: 'feedback',
+    pageTitle: 'Feedback',
     pageBody: 'feed(me)back',
     
   });
-  // console.log('the routing works');
+  // console.log('feedback routing works when /feedback loads'); // it does
 
 });
 

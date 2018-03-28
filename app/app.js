@@ -18,6 +18,7 @@ app.use(require('./routes/pets'));
 app.use(require('./routes/cats'));
 app.use(require('./routes/dogs'));
 app.use(require('./routes/feedback'));
+app.use(require('./routes/api'));
 
 // app.use(require('./routes/speaker')); // this is the speaker
 

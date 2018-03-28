@@ -1,12 +1,13 @@
 $(function() {
-  $.getJSON('api', updateFeedback);
-  console.log('getJSON works');
+  console.log('getJSON works'); // it works!
+  $.getJSON('/api', updateFeedback);
+  
 
 
   $('.feedbackForm').submit(function(e) {
     e.preventDefault();
-    console.log('submit works'); // it does
-    $.post('api', { // post injects the following to HTML
+    console.log('submit button works');
+    $.post('/api', { // post injects the following to HTML
       email: $('#feedbackEmail').val(),
       cheezburgers: $('#feedbackCheezburgers').val(),
       message: $('#feedbackMessage').val()
@@ -15,7 +16,7 @@ $(function() {
 
   function updateFeedback(data) {
     var output = '';
-
+    console.log('feedback func works');
     $.each(data, function(key, item) {
       output += '<div class="feedbackEntry">';
       output += '    <div class="feedbackEmail">';
@@ -25,7 +26,7 @@ $(function() {
       output += '    </div>';
       output += '</div>';
     });
-    console.log('feedback func works');
+    
     $('.feedback').html(output);
   }
 });

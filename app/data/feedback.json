@@ -1,12 +1,1 @@
-[
-   {
-      "email":"Jane@jane.jane",
-      "cheezburgers":1,
-      "message":"Would you consider moving the meeting time 30 minutes to about 6pm. It's tough to make it to the meetings on time right after work."
-   },
-   {
-      "email":"Roy@score.roy",
-      "cheezburgers":3,
-      "message":"I really enjoyed the speaker this month. Would love to hear another presentation."
-   }
-]
+[{"email":"","cheezburgers":"1","message":""},{"email":"","cheezburgers":"1","message":""},{"email":"","cheezburgers":"1","message":""},{"email":"ok@ok.com","cheezburgers":"2","message":"ok"},{"email":"test@test.test","cheezburgers":"1","message":"test"},{"email":"","cheezburgers":"1","message":""},{"email":"Jane@jane.jane","cheezburgers":"1","message":"Would you consider moving the meeting time 30 minutes to about 6pm. It's tough to make it to the meetings on time right after work."},{"email":"Roy@score.roy","cheezburgers":"3","message":"I really enjoyed the speaker this month. Would love to hear another presentation."}]
