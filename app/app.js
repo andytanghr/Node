@@ -3,6 +3,11 @@ var app = express();
 var dataFile = require('./data/data.json');
 var animalData = require('./data/animals.json');
 var reload = require('reload');
+var http = require('http').Server(app); // imports Node's http module and starts an HTTP server
+
+// adding chat feature
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
 
 // sets environmental variables for the entire app, globally
 app.set('view engine', 'ejs');
