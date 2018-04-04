@@ -32,6 +32,7 @@ var express = require('express');
 var app = express();
 var rp = require('request-promise');
 var cheerio = require('cheerio');
+var fs = require('fs');
 
 var options = {
   uri: 'http://www.berkshirehathaway.com',
@@ -41,25 +42,44 @@ var options = {
 };
 
 // web server scrapes a webpage when the server page is loaded, then sends scraped data back to server page
-
 app.get('/scrape', (req, res) => {
   rp(options)
-  .then((data) => {
+  .then( (data) => {
     console.log(data('title').text());
     let scrapedTitle = data('title').text()
     res.send( 
       `
         <h1>${scrapedTitle} on the web</h1>
-        
         ${data('html')}
-        
       `
     );
   })
   .catch((err) => {
     console.log(err);
-  });
+  }); 
+});
+
+app.get('/save', (req, res) => {
+  rp(options)
+  .then( (data) => {
+    fs.writeFile('scrapy.html', data('html'), (err) => { // get prompt to save unique filenames, otherwise scrapy.html is default file
+      if (err) {
+        console.log(err);
+        return;
+      }
+      console.log('saved ' + options.uri);
+    })
+  })
+  .then( () => {
+    res.send(
+      `
+      <h3>ok saved ${options.uri}</h3>
+      `
+    );
   
+  });
+
+
 });
 
 
