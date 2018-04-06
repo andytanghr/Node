@@ -1,4 +1,4 @@
-/* original code
+/* original code structure
 addNumbers(x, y)
   .then( (answer) => {
     console.log( answer );
@@ -8,81 +8,35 @@ addNumbers(x, y)
   });
 */
 
+/* this works but two Promises are created
+const addNumbers = (x, y) => {
+  if (typeof x !== 'number' || typeof y !== 'number') {
+    return new Promise( (resolve, reject) => {
+      reject('Nope, NaN!');
+    })
+  };
+  return new Promise( (resolve, reject) => {
+    resolve(x + y);
+  });
+}
+*/
 
-// function addNumbers(a, b) {
-
-//   }
-// };
-
-// var addNumbers = (x, y) => {
-//   if (typeof x === 'number' && typeof y === 'number') {
-//     return x + y;
-//   };
-
-// var addNumbersPromise = addNumbers(1, 3);
-// addNumbersPromise()
-//   .then( (answer) => {
-//     console.log(answer);
-//   })
-//   .catch( (error) => {
-//     console.log(error);
-//   });
-// };
-
-
-function addNumbers(x, y) {
-  console.log('this works');
-  return x + y;
+// works with only one Promise, testing how the resolve and reject are returned
+const addNumbers = (x, y) => {
+  return new Promise( (resolve, reject) => {
+    if (typeof x !== 'number' || typeof y !== 'number') {
+      reject('Nope, NaN!');
+    }
+    resolve(x + y); 
+  });
 }
 
-var addNumbersPromise = addNumbers(1, 4);
-addNumbersPromise
-  .then( (answer) => {
-    console.log(answer);
-  })
-  .catch( (error) => {
-    console.log(error);
-  });
 
-
-// var addNumbersPromise = new Promise( function(resolve, reject) {
-//   var n = addNumbers()
-
-// });
-
-
-// console.log( addNumbers(1, 3) );
-
-
-
-/*
-var addNumbers = new Promise ( (resolve, reject) => {
-  var added = x + y;
-  if (typeof x === 'number' && typeof y === 'number') {
-    resolve(added);
-  }
-  else {
-    reject(Errpr('x and y are not numbers'));
-  }
-});
-   
-addNumbers
+addNumbers(1, '21')
   .then( (result) => {
-  catch()
-
-});
-
-
-  (x, y) => {
-  if (typeof x === 'number' && typeof y === 'number') {
-    return x + y;
-  }
-
-  .then( (answer) => {
-    console.log(answer);
+    console.log(result);
+    console.log('works');
   })
   .catch( (error) => {
-    console.log(error);
+    console.log(error + ' got rejected');
   });
-};
-*/
