@@ -1,6 +1,6 @@
 // const addNumbers = (x, y) => {
 //   new Promise( (resolve, reject) => {
-//     if (typeof x !== 'number' && typeof y !== 'number') {
+//     if (typeof x !== 'number' || typeof y !== 'number') {
 //       reject('Not a number!');
 //     }
 //     resolve(x + y);
@@ -10,7 +10,7 @@
 
 // this works but no rejects are caught?
 // const addNumbers = (x, y) => {
-//   if (typeof x !== 'number' && typeof y !== 'number') {
+//   if (typeof x !== 'number' || typeof y !== 'number') {
 //     var error = 'Not a number!';
 //   } 
 //   return new Promise( (resolve, reject) => {
