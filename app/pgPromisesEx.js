@@ -11,7 +11,7 @@ var db = pgp(connectionString);
 var result = [];
 var name, year, artistid;
 // how do we extract values from an array for SQL to INSERT INTO?
-// right now, the array elements are called
+// right now, the array elements are calledcd ..
 
 prompt('Album name? ')
 .then(function albumResponse(val) {
